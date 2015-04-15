@@ -9,8 +9,10 @@ public class SettingsManager {
     private Context m_Context;
     private final String m_FileName = "MainPreferences";
     private final String m_SeverIp = "ServerIp";
-    private final String m_SeverPort = "ServerPort";
+    private final String m_TcpPort = "TcpPort";
+    private final String m_UdpPort = "UdpPort";
     private final String m_DeviceName = "DeviceName";
+    private final String m_UseUdp = "UseUdp";
 
     private SettingsManager(Context context){
         m_Context = context;
@@ -28,15 +30,19 @@ public class SettingsManager {
     }
 
     public boolean isConfigurationPresent(){
-        return getPreferences().contains(m_SeverIp) && getPreferences().contains(m_SeverPort);
+        return getPreferences().contains(m_SeverIp) && getPreferences().contains(m_TcpPort);
     }
 
     public String getServerIp(){
         return getPreferences().getString(m_SeverIp, null);
     }
 
-    public Integer getServerPort(){
-        return getPreferences().getInt(m_SeverPort, 4444);
+    public Integer getTcpPort(){
+        return getPreferences().getInt(m_TcpPort, 4444);
+    }
+
+    public Integer getUdpPort(){
+        return getPreferences().getInt(m_UdpPort, 4443);
     }
 
     public String getDeviceName(){
@@ -44,7 +50,7 @@ public class SettingsManager {
     }
 
     public Settings getSettings(){
-        return new Settings(getServerIp(), getServerPort(), getDeviceName());
+        return new Settings(getServerIp(), getDeviceName(), getTcpPort(), getUdpPort());
     }
 
     public void saveServerIp(String newIp){
@@ -53,9 +59,15 @@ public class SettingsManager {
         editor.commit();
     }
 
-    public void saveSeverPort(Integer newPort){
+    public void saveTcpPort(Integer newPort){
         SharedPreferences.Editor editor = getPreferences().edit();
-        editor.putInt(m_SeverPort, newPort);
+        editor.putInt(m_TcpPort, newPort);
+        editor.commit();
+    }
+
+    public void saveUdpPort(Integer newPort){
+        SharedPreferences.Editor editor = getPreferences().edit();
+        editor.putInt(m_UdpPort, newPort);
         editor.commit();
     }
 

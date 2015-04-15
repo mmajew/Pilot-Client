@@ -4,13 +4,15 @@ package com.example.martin.pilot.source.settings;
  * Created by Martin on 04/04/2015.
  */
 public class Settings {
-    public Settings(String serverIp, Integer serverPort, String deviceName) {
+    public Settings(String serverIp, String deviceName, Integer tcpPort, Integer udpPort) {
         this.serverIp = serverIp;
-        this.serverPort = serverPort;
         this.deviceName = deviceName;
+        this.tcpPort = tcpPort;
+        this.udpPort = udpPort;
     }
 
     public String serverIp;
-    public Integer serverPort;
     public String deviceName;
+    public Integer tcpPort;
+    public Integer udpPort;
 }
