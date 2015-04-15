@@ -6,15 +6,6 @@
     android:id="@+id/relativeLayout"
     android:background="@android:color/black" >
 
-    <GridView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:id="@+id/mainGridView"
-        android:layout_centerInParent = "true"
-        android:background="@drawable/main_grid_view_back" />
-
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
@@ -22,7 +13,8 @@
         android:background="#3C3C3D"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
+        android:layout_alignParentStart="true"
+        android:id="@+id/linearLayout">
 
         <TextView
             android:layout_width="wrap_content"
@@ -41,6 +33,29 @@
             android:gravity="center"
             android:id="@+id/imageView" />
     </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/linearLayout"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:gravity="center">
+
+        <GridView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:id="@+id/mainGridView"
+            android:background="@drawable/main_grid_view_back"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="false"
+            android:layout_alignWithParentIfMissing="false"
+            android:focusableInTouchMode="false" />
+    </RelativeLayout>
 
 
 </RelativeLayout>

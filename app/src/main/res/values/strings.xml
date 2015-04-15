@@ -9,5 +9,6 @@
     <string name="item_name_keyboard">Klawiatura</string>
     <string name="title_activity_settings">SettingsActivity</string>
     <string name="connction_offline">Brak połączenia</string>
+    <string name="udp_checkbox">Włącz połączenie UDP dla kursora</string>
 
 </resources>
