@@ -26,11 +26,10 @@ public class MainActivity extends ActionBarActivity {
 
         initializeManagers();
 
-        if(!m_settingsManager.isConfigurationPresent()) {
+        if(!SettingsManager.getInstance().isConfigurationPresent()) {
             launchFirstConfiguration();
         }
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -61,8 +60,6 @@ public class MainActivity extends ActionBarActivity {
     }
 
     private void initializeManagers() {
-        m_settingsManager = SettingsManager.initialize(this);
+        SettingsManager.initialize(this);
     }
-
-    private SettingsManager m_settingsManager;
 }

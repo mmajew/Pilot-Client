@@ -16,10 +16,9 @@ public class SettingsManager {
         m_Context = context;
     }
 
-    public static SettingsManager initialize(Context context) {
+    public static void initialize(Context context) {
         if(m_self == null)
             m_self = new SettingsManager(context);
-        return m_self;
     }
 
     public static SettingsManager getInstance() {
