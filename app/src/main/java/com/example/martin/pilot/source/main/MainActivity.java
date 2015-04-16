@@ -7,8 +7,10 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.GridView;
+import android.widget.Toast;
 
 import com.example.martin.pilot.R;
+import com.example.martin.pilot.source.connection.ConnectionManager;
 import com.example.martin.pilot.source.settings.SettingsActivity;
 import com.example.martin.pilot.source.settings.SettingsManager;
 
@@ -28,6 +30,9 @@ public class MainActivity extends ActionBarActivity {
 
         if(!SettingsManager.getInstance().isConfigurationPresent()) {
             launchFirstConfiguration();
+        }
+        else {
+            Toast.makeText(this, "Trzy", Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -54,12 +59,13 @@ public class MainActivity extends ActionBarActivity {
     }
 
     public void launchFirstConfiguration() {
-        Log.w("Settings", "No configuration available"); //TODO
+        Log.w("Settings", "No configuration available");
         Intent settingsIntent = new Intent(this, SettingsActivity.class);
         startActivity(settingsIntent);
     }
 
     private void initializeManagers() {
         SettingsManager.initialize(this);
+        ConnectionManager.initialize();
     }
 }
