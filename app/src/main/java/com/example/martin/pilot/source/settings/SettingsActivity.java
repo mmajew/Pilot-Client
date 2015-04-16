@@ -12,16 +12,11 @@ import android.widget.EditText;
 import com.example.martin.pilot.R;
 
 public class SettingsActivity extends ActionBarActivity {
-    SettingsManager settingsManager = SettingsManager.getInstance();
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
-
-        if(settingsManager.isConfigurationPresent()) {
-            readConfiguration();
-        }
+        readSettings();
 
         Button connectButton = (Button) findViewById(R.id.connectButton);
         connectButton.setOnClickListener(new View.OnClickListener() {
@@ -60,6 +55,7 @@ public class SettingsActivity extends ActionBarActivity {
         EditText serverIp = (EditText) findViewById(R.id.editServerAddress);
         EditText serverTcpPort = (EditText) findViewById(R.id.editTcpPort);
 
+        SettingsManager settingsManager = SettingsManager.getInstance();
         settingsManager.saveDeviceName(deviceName.getText().toString());
         settingsManager.saveServerIp(serverIp.getText().toString());
         settingsManager.saveTcpPort(Integer.parseInt(serverTcpPort.getText().toString()));
@@ -73,7 +69,8 @@ public class SettingsActivity extends ActionBarActivity {
         }
     }
 
-    private void readConfiguration() {
+    private void readSettings() {
+        SettingsManager settingsManager = SettingsManager.getInstance();
         String deviceName = settingsManager.getDeviceName();
         String serverAddress = settingsManager.getServerIp();
 
