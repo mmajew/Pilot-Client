@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.GridView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.martin.pilot.R;
@@ -31,9 +32,11 @@ public class MainActivity extends ActionBarActivity {
         if(!SettingsManager.getInstance().isConfigurationPresent()) {
             launchFirstConfiguration();
         }
-        else {
-            Toast.makeText(this, "Trzy", Toast.LENGTH_SHORT).show();
-        }
+
+        String connectionInfo = ConnectionManager.getInstance().isConnected() ?
+                "Połączono z " + SettingsManager.getInstance().getServerIp() : "Brak połączenia";
+
+        ((TextView) findViewById(R.id.connectionView)).setText(connectionInfo);
     }
 
     @Override

@@ -1,5 +1,6 @@
 package com.example.martin.pilot.source.settings;
 
+import android.app.ProgressDialog;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -10,6 +11,7 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 
 import com.example.martin.pilot.R;
+import com.example.martin.pilot.source.connection.ConnectionManager;
 
 public class SettingsActivity extends ActionBarActivity {
     @Override
@@ -67,6 +69,8 @@ public class SettingsActivity extends ActionBarActivity {
             settingsManager.saveUdpPort(Integer.parseInt(serverUdpPort.getText().toString()));
             settingsManager.saveIsUdpAllowed(isUdpAllowed);
         }
+
+        ConnectionManager.getInstance().attemptConnection(this);
     }
 
     private void readSettings() {

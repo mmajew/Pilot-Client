@@ -9,6 +9,7 @@ import android.widget.AdapterView;
 import android.widget.Toast;
 
 import com.example.martin.pilot.R;
+import com.example.martin.pilot.source.connection.ConnectionManager;
 import com.example.martin.pilot.source.settings.SettingsActivity;
 
 
@@ -22,27 +23,25 @@ public class MainOnClickListener implements AdapterView.OnItemClickListener {
     @Override
     public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
         Intent intent;
+        boolean isConnected = ConnectionManager.getInstance().isConnected();
         switch (position) {
             case 0:
                 intent = new Intent(m_Context, SettingsActivity.class);
                 m_Context.startActivity(intent);
                 break;
             case 1:
-                showNoConnectionDialog();
+                if(!isConnected)
+                    showNoConnectionDialog();
                 //intent = new Intent(context, PlacesActivity.class);
                 //context.startActivity(intent);
                 break;
             case 2:
-                showNoConnectionDialog();
+                if(!isConnected)
+                    showNoConnectionDialog();
                 //intent = new Intent(context, ScheduleActivity.class);
                 //context.startActivity(intent);
                 break;
         }
-    }
-
-    public void showToast(String message) {
-        Toast toast = Toast.makeText(m_Context, message, Toast.LENGTH_SHORT);
-        toast.show();
     }
 
     private void showNoConnectionDialog(){
