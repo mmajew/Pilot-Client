@@ -29,7 +29,7 @@ public class SettingsManager {
 
     public static SettingsManager getInstance() {
         if(m_self == null)
-            Log.e("SettingsManager", "Uninitialized reference to SettingsManager"); //TODO
+            Log.e("SettingsManager", "Uninitialized reference to SettingsManager");
         return m_self;
     }
 
@@ -60,31 +60,31 @@ public class SettingsManager {
     public void saveServerIp(String newIp){
         SharedPreferences.Editor editor = getPreferences().edit();
         editor.putString(SERVER_IP, newIp);
-        editor.commit();
+        editor.apply();
     }
 
     public void saveTcpPort(Integer newPort){
         SharedPreferences.Editor editor = getPreferences().edit();
         editor.putInt(TCP_PORT, newPort);
-        editor.commit();
+        editor.apply();
     }
 
     public void saveUdpPort(Integer newPort){
         SharedPreferences.Editor editor = getPreferences().edit();
         editor.putInt(UDP_PORT, newPort);
-        editor.commit();
+        editor.apply();
     }
 
     public void saveDeviceName(String newName){
         SharedPreferences.Editor editor = getPreferences().edit();
         editor.putString(DEVICE_NAME, newName);
-        editor.commit();
+        editor.apply();
     }
 
     public void saveIsUdpAllowed(boolean useUdp) {
         SharedPreferences.Editor editor = getPreferences().edit();
         editor.putBoolean(ALLOW_UDP, useUdp);
-        editor.commit();
+        editor.apply();
     }
 
     private SharedPreferences getPreferences(){

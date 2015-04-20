@@ -7,27 +7,27 @@ import android.util.Log;
  * Created by marmajew on 4/17/2015.
  */
 public class ConnectTask extends AsyncTask<String,String,TCPClient> {
-    private TCPClient TCPClient;
+    private TCPClient client;
     private MessageReceiver messageReceiver;
 
     public ConnectTask(TCPClient client) {
-        TCPClient = client;
+        this.client = client;
     }
 
     @Override
     protected TCPClient doInBackground(String... message) {
-        messageReceiver = new MessageReceiver();
-        TCPClient.setMessageListener(new TCPClient.OnMessageReceived() {
+        messageReceiver = new MessageReceiver(client);
+        client.setMessageListener(new TCPClient.OnMessageReceived() {
             @Override
             public void messageReceived(String message) {
-                if(isCancelled()) {
+                if (isCancelled()) {
                     Log.e("Cancelling task", "Stopping server");
-                    TCPClient.stopClient();
+                    ConnectionManager.getInstance().closeConnection();
                 }
                 publishProgress(message);
             }
         });
-        TCPClient.run();
+        client.run();
 
         return null;
     }

@@ -1,6 +1,5 @@
 package com.example.martin.pilot.source.connection;
 
-import android.app.ProgressDialog;
 import android.util.Log;
 
 import com.example.martin.pilot.source.settings.SettingsManager;
@@ -38,7 +37,7 @@ public class TCPClient {
         }
     }
 
-    public void stopClient(){
+    public void close(){
         isRunning = false;
         if(socket != null){
             try {
@@ -47,6 +46,8 @@ public class TCPClient {
                 e.printStackTrace();
             }
         }
+
+        ConnectionManager.getInstance().setDisconnected();
     }
 
     public void run() {
@@ -63,7 +64,6 @@ public class TCPClient {
                 Log.e("TCP Client", "C: Initialized.");
 
                 sendMessage("C:CONN;" + SettingsManager.getInstance().getDeviceName());
-                sendMessage("C:CONN;" + SettingsManager.getInstance().getDeviceName());
                 while (isRunning) {
                     serverMessage = in.readLine();
 
@@ -73,19 +73,12 @@ public class TCPClient {
                     }
                     serverMessage = null;
                 }
-
-            } catch (Exception e) {
-
-                Log.e("TCP", "S: Error", e);
-
             } finally {
-                //the socket must be closed. It is not possible to reconnect to this socket
-                // after it is closed, which means a new socket instance has to be created.
-                socket.close();
+                close();
+                Log.e("TCP", "S: Closed");
             }
         } catch (Exception e) {
-
-            Log.e("TCP", "C: Error", e);
+            Log.e("TCP E: ", e.getMessage());
         }
     }
 

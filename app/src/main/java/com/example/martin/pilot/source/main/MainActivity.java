@@ -16,7 +16,7 @@ import com.example.martin.pilot.source.settings.SettingsActivity;
 import com.example.martin.pilot.source.settings.SettingsManager;
 
 
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends ActivityBase {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,33 +32,6 @@ public class MainActivity extends ActionBarActivity {
         if(!SettingsManager.getInstance().isConfigurationPresent()) {
             launchFirstConfiguration();
         }
-
-        String connectionInfo = ConnectionManager.getInstance().isConnected() ?
-                "Połączono z " + SettingsManager.getInstance().getServerIp() : "Brak połączenia";
-
-        ((TextView) findViewById(R.id.connectionView)).setText(connectionInfo);
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
     }
 
     public void launchFirstConfiguration() {
@@ -69,6 +42,5 @@ public class MainActivity extends ActionBarActivity {
 
     private void initializeManagers() {
         SettingsManager.initialize(this);
-        ConnectionManager.initialize();
     }
 }
