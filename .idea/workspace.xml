@@ -32,6 +32,7 @@
     </layouts>
   </component>
   <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="ERROR" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="app: com.example.martin.pilot" />
   </component>
   <component name="ChangeListManager">
@@ -57,37 +58,27 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="MainActivity.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/martin/pilot/source/main/MainActivity.java">
+      <file leaf-file-name="SettingsManager.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/martin/pilot/source/settings/SettingsManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="663">
-              <caret line="40" column="5" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
-              <folding>
-                <element signature="e#1394#1395#0" expanded="true" />
-                <element signature="e#1442#1443#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ActivityBase.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/martin/pilot/source/main/ActivityBase.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4831081" vertical-offset="105" max-vertical-offset="918">
-              <caret line="23" column="48" selection-start-line="23" selection-start-column="48" selection-end-line="23" selection-end-column="48" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MainOnClickListener.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/martin/pilot/source/main/MainOnClickListener.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="36" max-vertical-offset="816">
-              <caret line="25" column="62" selection-start-line="25" selection-start-column="62" selection-end-line="25" selection-end-column="62" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="921" max-vertical-offset="1513">
+              <caret line="24" column="23" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SettingsActivity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/martin/pilot/source/settings/SettingsActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1938">
+              <caret line="88" column="49" selection-start-line="88" selection-start-column="49" selection-end-line="88" selection-end-column="49" />
+              <folding>
+                <element signature="e#1055#1542#0" expanded="true" />
+                <element signature="e#1531#1532#0" expanded="true" />
+                <element signature="e#2971#3262#0" expanded="true" />
+                <element signature="e#3251#3252#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -95,8 +86,8 @@
       <file leaf-file-name="TCPClient.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/martin/pilot/source/connection/TCPClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="291" max-vertical-offset="1411">
-              <caret line="49" column="46" selection-start-line="49" selection-start-column="46" selection-end-line="49" selection-end-column="46" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="139" max-vertical-offset="1479">
+              <caret line="27" column="62" selection-start-line="27" selection-start-column="62" selection-end-line="27" selection-end-column="62" />
               <folding>
                 <element signature="e#710#711#0" expanded="true" />
                 <element signature="e#752#753#0" expanded="true" />
@@ -105,68 +96,55 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UDPClient.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/martin/pilot/source/connection/UDPClient.java">
+      <file leaf-file-name="MessageReceiver.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/martin/pilot/source/connection/MessageReceiver.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="221">
-              <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+            <state vertical-scroll-proportion="0.8614865" vertical-offset="153" max-vertical-offset="833">
+              <caret line="42" column="51" selection-start-line="42" selection-start-column="51" selection-end-line="42" selection-end-column="51" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PingHandler.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/martin/pilot/source/handlers/PingHandler.java">
+      <file leaf-file-name="AlertDialog.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-21/android/app/AlertDialog.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="122" max-vertical-offset="867">
-              <caret line="33" column="29" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="29" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="3322" max-vertical-offset="15980">
+              <caret line="253" column="86" selection-start-line="253" selection-start-column="62" selection-end-line="253" selection-end-column="86" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DialogFactory.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/martin/pilot/source/tools/DialogFactory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="122" max-vertical-offset="714">
+              <caret line="27" column="60" selection-start-line="27" selection-start-column="33" selection-end-line="27" selection-end-column="60" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#270#271#0" expanded="true" />
-                <element signature="e#301#302#0" expanded="true" />
-                <element signature="e#499#1281#0" expanded="true" />
-                <element signature="e#840#1046#0" expanded="true" />
-                <element signature="e#1270#1271#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TaskHandler.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/martin/pilot/source/handlers/TaskHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="340">
-              <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
-              <folding>
-                <element signature="e#277#278#0" expanded="true" />
-                <element signature="e#311#312#0" expanded="true" />
-              </folding>
-            </state>
+      <file leaf-file-name="ic_dialog_alert.png" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/platforms/android-21/data/res/drawable-ldpi/ic_dialog_alert.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
           </provider>
         </entry>
       </file>
       <file leaf-file-name="ConnectTask.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/martin/pilot/source/connection/ConnectTask.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="782">
-              <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="54" max-vertical-offset="748">
+              <caret line="25" column="42" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="42" />
               <folding>
-                <element signature="e#340#341#0" expanded="true" />
-                <element signature="e#376#377#0" expanded="true" />
-                <element signature="e#542#914#0" expanded="true" />
-                <element signature="e#903#904#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MessageReceiver.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/martin/pilot/source/connection/MessageReceiver.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="765">
-              <caret line="32" column="37" selection-start-line="32" selection-start-column="37" selection-end-line="32" selection-end-column="37" />
-              <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#296#297#0" expanded="true" />
+                <element signature="e#332#333#0" expanded="true" />
+                <element signature="e#612#613#0" expanded="true" />
+                <element signature="e#668#669#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -175,14 +153,22 @@
       <file leaf-file-name="ConnectionManager.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/martin/pilot/source/connection/ConnectionManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="138" max-vertical-offset="1632">
-              <caret line="32" column="15" selection-start-line="32" selection-start-column="15" selection-end-line="32" selection-end-column="15" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="687" max-vertical-offset="1292">
+              <caret line="60" column="30" selection-start-line="60" selection-start-column="30" selection-end-line="60" selection-end-column="30" />
               <folding>
-                <element signature="e#667#668#0" expanded="true" />
-                <element signature="e#701#702#0" expanded="true" />
-                <element signature="e#1734#1921#0" expanded="true" />
-                <element signature="e#1910#1911#0" expanded="true" />
+                <element signature="e#579#580#0" expanded="true" />
+                <element signature="e#613#614#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AsyncTask.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-21/android/os/AsyncTask.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="7079" max-vertical-offset="10710">
+              <caret line="465" column="25" selection-start-line="465" selection-start-column="25" selection-end-line="465" selection-end-column="25" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -880,23 +866,28 @@
         <option value="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/edittextstyle.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/martin/pilot/source/settings/Settings.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_settings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/martin/pilot/source/main/MainOnClickListener.java" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/martin/pilot/source/connection/TcpClient.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/martin/pilot/source/main/MainAdapter.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/martin/pilot/source/settings/SettingsActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/martin/pilot/source/settings/SettingsManager.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/martin/pilot/source/main/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/martin/pilot/source/main/ActivityBase.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/martin/pilot/source/handlers/TaskHandler.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/martin/pilot/source/connection/ConnectTask.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/martin/pilot/source/connection/MessageReceiver.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/martin/pilot/source/connection/TCPClient.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/martin/pilot/source/connection/ConnectionManager.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/martin/pilot/source/main/ActivityBase.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/martin/pilot/source/main/MainActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/martin/pilot/source/tools/DialogUtilities.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/martin/pilot/source/main/MainOnClickListener.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/martin/pilot/source/tools/DialogBuilder.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/martin/pilot/source/main/SettingsActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_settings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/martin/pilot/source/handlers/PingHandler.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/martin/pilot/source/main/BaseActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/martin/pilot/source/tools/DialogFactory.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/martin/pilot/source/settings/SettingsActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/martin/pilot/source/connection/ConnectionManager.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/martin/pilot/source/connection/ConnectTask.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/martin/pilot/source/connection/TCPClient.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/martin/pilot/source/connection/MessageReceiver.java" />
       </list>
     </option>
   </component>
@@ -932,8 +923,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -1028,6 +1017,28 @@
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="tools" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Pilot" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="source" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="settings" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -1048,32 +1059,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="source" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Pilot" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="source" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="handlers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -1128,6 +1113,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane" />
     </panes>
   </component>
@@ -1336,6 +1323,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28735632" sideWeight="0.29278728" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294621" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32873562" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32988507" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
@@ -1355,7 +1343,6 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294621" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1380,22 +1367,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="306">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/dimens.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="187">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/styles.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="238">
@@ -1419,10 +1390,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="612" max-vertical-offset="1139">
           <caret line="36" column="42" selection-start-line="36" selection-start-column="42" selection-end-line="36" selection-end-column="42" />
-          <folding>
-            <element signature="e#1394#1395#0" expanded="true" />
-            <element signature="e#1442#1443#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1526,10 +1494,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="64" max-vertical-offset="952">
           <caret line="20" column="51" selection-start-line="20" selection-start-column="51" selection-end-line="20" selection-end-column="51" />
-          <folding>
-            <element signature="e#1394#1395#0" expanded="true" />
-            <element signature="e#1442#1443#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1637,31 +1602,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-21/android/app/AlertDialog.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33277026" vertical-offset="5294" max-vertical-offset="16014">
-          <caret line="377" column="15" selection-start-line="377" selection-start-column="15" selection-end-line="377" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-21/android/os/Build.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.35431653" vertical-offset="704" max-vertical-offset="10999">
           <caret line="71" column="31" selection-start-line="71" selection-start-column="31" selection-end-line="71" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_settings.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.037037" vertical-offset="0" max-vertical-offset="3094">
-          <caret line="8" column="28" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
-          <folding>
-            <element signature="e#403#436#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1681,37 +1625,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-21/android/os/AsyncTask.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/martin/pilot/source/handlers/TaskHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="8150" max-vertical-offset="10710">
-          <caret line="533" column="53" selection-start-line="533" selection-start-column="53" selection-end-line="533" selection-end-column="53" />
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="340">
+          <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/martin/pilot/source/settings/SettingsActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/martin/pilot/source/connection/UDPClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="88" max-vertical-offset="1037">
-          <caret line="19" column="10" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/martin/pilot/source/settings/SettingsManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="955" max-vertical-offset="1547">
-          <caret line="87" column="5" selection-start-line="87" selection-start-column="5" selection-end-line="87" selection-end-column="5" />
-          <folding>
-            <element signature="e#640#641#0" expanded="true" />
-            <element signature="e#675#676#0" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="221">
+          <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/martin/pilot/source/main/MainAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="292" max-vertical-offset="1088">
-          <caret line="58" column="17" selection-start-line="58" selection-start-column="17" selection-end-line="58" selection-end-column="17" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="190" max-vertical-offset="1190">
+          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/martin/pilot/source/main/MainOnClickListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="714">
+          <caret line="33" column="22" selection-start-line="33" selection-start-column="22" selection-end-line="33" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_settings.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.740741" vertical-offset="2512" max-vertical-offset="3077">
+          <caret line="168" column="48" selection-start-line="168" selection-start-column="48" selection-end-line="168" selection-end-column="48" />
           <folding />
         </state>
       </provider>
@@ -1727,60 +1676,104 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/martin/pilot/source/main/MainOnClickListener.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/martin/pilot/source/handlers/PingHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="36" max-vertical-offset="816">
-          <caret line="25" column="62" selection-start-line="25" selection-start-column="62" selection-end-line="25" selection-end-column="62" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="918">
+          <caret line="37" column="82" selection-start-line="37" selection-start-column="82" selection-end-line="37" selection-end-column="82" />
+          <folding>
+            <element signature="e#390#391#0" expanded="true" />
+            <element signature="e#421#422#0" expanded="true" />
+            <element signature="e#607#1506#0" expanded="true" />
+            <element signature="e#948#1271#0" expanded="true" />
+            <element signature="e#1244#1245#0" expanded="true" />
+            <element signature="e#1495#1496#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/martin/pilot/source/main/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="176" max-vertical-offset="731">
+          <caret line="11" column="46" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="46" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/martin/pilot/source/handlers/TaskHandler.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/martin/pilot/source/main/BaseActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="340">
-          <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="7" max-vertical-offset="867">
+          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-21/android/os/AsyncTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="7079" max-vertical-offset="10710">
+          <caret line="465" column="25" selection-start-line="465" selection-start-column="25" selection-end-line="465" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-21/android/app/AlertDialog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3322" max-vertical-offset="15980">
+          <caret line="253" column="86" selection-start-line="253" selection-start-column="62" selection-end-line="253" selection-end-column="86" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/platforms/android-21/data/res/drawable-ldpi/ic_dialog_alert.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/martin/pilot/source/connection/ConnectionManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="687" max-vertical-offset="1292">
+          <caret line="60" column="30" selection-start-line="60" selection-start-column="30" selection-end-line="60" selection-end-column="30" />
           <folding>
-            <element signature="e#277#278#0" expanded="true" />
-            <element signature="e#311#312#0" expanded="true" />
+            <element signature="e#579#580#0" expanded="true" />
+            <element signature="e#613#614#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/martin/pilot/source/connection/ConnectTask.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/martin/pilot/source/settings/SettingsActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="782">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="870" max-vertical-offset="1938">
+          <caret line="88" column="49" selection-start-line="88" selection-start-column="49" selection-end-line="88" selection-end-column="49" />
           <folding>
-            <element signature="e#340#341#0" expanded="true" />
-            <element signature="e#376#377#0" expanded="true" />
-            <element signature="e#542#914#0" expanded="true" />
-            <element signature="e#903#904#0" expanded="true" />
+            <element signature="e#1055#1542#0" expanded="true" />
+            <element signature="e#1531#1532#0" expanded="true" />
+            <element signature="e#2971#3262#0" expanded="true" />
+            <element signature="e#3251#3252#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/martin/pilot/source/connection/MessageReceiver.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/martin/pilot/source/tools/DialogFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="765">
-          <caret line="32" column="37" selection-start-line="32" selection-start-column="37" selection-end-line="32" selection-end-column="37" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="122" max-vertical-offset="714">
+          <caret line="27" column="60" selection-start-line="27" selection-start-column="33" selection-end-line="27" selection-end-column="60" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/martin/pilot/source/connection/UDPClient.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/martin/pilot/source/settings/SettingsManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="221">
-          <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="121" max-vertical-offset="1513">
+          <caret line="24" column="23" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/martin/pilot/source/connection/TCPClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="291" max-vertical-offset="1411">
-          <caret line="49" column="46" selection-start-line="49" selection-start-column="46" selection-end-line="49" selection-end-column="46" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="139" max-vertical-offset="1479">
+          <caret line="27" column="62" selection-start-line="27" selection-start-column="62" selection-end-line="27" selection-end-column="62" />
           <folding>
             <element signature="e#710#711#0" expanded="true" />
             <element signature="e#752#753#0" expanded="true" />
@@ -1788,52 +1781,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/martin/pilot/source/connection/ConnectionManager.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/martin/pilot/source/connection/ConnectTask.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="138" max-vertical-offset="1632">
-          <caret line="32" column="15" selection-start-line="32" selection-start-column="15" selection-end-line="32" selection-end-column="15" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="54" max-vertical-offset="748">
+          <caret line="25" column="42" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="42" />
           <folding>
-            <element signature="e#667#668#0" expanded="true" />
-            <element signature="e#701#702#0" expanded="true" />
-            <element signature="e#1734#1921#0" expanded="true" />
-            <element signature="e#1910#1911#0" expanded="true" />
+            <element signature="e#296#297#0" expanded="true" />
+            <element signature="e#332#333#0" expanded="true" />
+            <element signature="e#612#613#0" expanded="true" />
+            <element signature="e#668#669#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/martin/pilot/source/handlers/PingHandler.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/martin/pilot/source/connection/MessageReceiver.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="122" max-vertical-offset="867">
-          <caret line="33" column="29" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#270#271#0" expanded="true" />
-            <element signature="e#301#302#0" expanded="true" />
-            <element signature="e#499#1281#0" expanded="true" />
-            <element signature="e#840#1046#0" expanded="true" />
-            <element signature="e#1270#1271#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/martin/pilot/source/main/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="663">
-          <caret line="40" column="5" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
-          <folding>
-            <element signature="e#1394#1395#0" expanded="true" />
-            <element signature="e#1442#1443#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/martin/pilot/source/main/ActivityBase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4831081" vertical-offset="105" max-vertical-offset="918">
-          <caret line="23" column="48" selection-start-line="23" selection-start-column="48" selection-end-line="23" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.8614865" vertical-offset="153" max-vertical-offset="833">
+          <caret line="42" column="51" selection-start-line="42" selection-start-column="51" selection-end-line="42" selection-end-column="51" />
+          <folding />
         </state>
       </provider>
     </entry>

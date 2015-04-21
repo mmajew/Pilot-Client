@@ -38,7 +38,9 @@ public class TCPClient {
     }
 
     public void close(){
+        Log.e("TCP", "S: Closing");
         isRunning = false;
+
         if(socket != null){
             try {
                 socket.close();
@@ -47,7 +49,7 @@ public class TCPClient {
             }
         }
 
-        ConnectionManager.getInstance().setDisconnected();
+        messageListener.stop();
     }
 
     public void run() {
@@ -64,6 +66,7 @@ public class TCPClient {
                 Log.e("TCP Client", "C: Initialized.");
 
                 sendMessage("C:CONN;" + SettingsManager.getInstance().getDeviceName());
+
                 while (isRunning) {
                     serverMessage = in.readLine();
 
@@ -84,5 +87,6 @@ public class TCPClient {
 
     public interface OnMessageReceived {
         public void messageReceived(String message);
+        public void stop();
     }
 }

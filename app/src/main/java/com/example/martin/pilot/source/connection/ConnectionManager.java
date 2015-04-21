@@ -1,35 +1,34 @@
 package com.example.martin.pilot.source.connection;
 
 import android.app.ProgressDialog;
-import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 
-import com.example.martin.pilot.source.main.ActivityBase;
 import com.example.martin.pilot.source.main.MainActivity;
+import com.example.martin.pilot.source.settings.SettingsActivity;
 import com.example.martin.pilot.source.settings.SettingsManager;
 
-/**
- * Created by marmajew on 4/16/2015.
- */
+
 public class ConnectionManager {
-    private TCPClient TCPClient;
+    private TCPClient tcpClient;
     static private ConnectionManager m_self;
     private boolean isConnected = false;
-    private ActivityBase context;
+    private SettingsActivity settingsContext;
 
-    ProgressDialog dialog;
+    ProgressDialog progressDialog;
 
     public boolean isConnected() {
         return isConnected;
     }
 
-    public void setDisconnected() {
-        isConnected = false;
-        context.updateSubtitle();
+    public void confirmConnectionLost() {
+        closeTcpClient();
+
+        Intent intent = new Intent(settingsContext, SettingsActivity.class);
+        intent.putExtra("CONNECTION_LOST", true);
+        settingsContext.startActivity(intent);
     }
 
-    public String getConnectionState() {
+    public String getConnectionStateString() {
         return isConnected ? "Połączono z " + SettingsManager.getInstance().getServerIp() : "Brak połączenia";
     }
 
@@ -39,48 +38,27 @@ public class ConnectionManager {
         return m_self;
     }
 
-    public void attemptConnectionWithDialog(Context context) {
-
-    }
-
-    public void attemptConnection(ActivityBase context) {
-        this.context = context;
-
-        if(TCPClient != null) {
-            TCPClient.close();
-        }
-
-        TCPClient = new TCPClient();
-        final ConnectTask task = new ConnectTask(TCPClient);
-        task.execute("");
-
-        dialog = new ProgressDialog(this.context, ProgressDialog.STYLE_SPINNER);
-        dialog.setTitle("Łączenie");
-        dialog.setMessage("Oczekiwanie na odpowiedź serwera");
-        dialog.setButton(DialogInterface.BUTTON_NEGATIVE, "Anuluj", new DialogInterface.OnClickListener()
-        {
-            public void onClick(DialogInterface dialog, int which)
-            {
-                task.cancel(true);
-            }
-        });
-
-        dialog.show();
+    public void attemptConnection(SettingsActivity context, ProgressDialog dialog) {
+        progressDialog = dialog;
+        settingsContext = context;
+        tcpClient = new TCPClient();
+        new ConnectTask(tcpClient).execute("");
     }
 
     public void confirmConnection() {
-        if(dialog != null && dialog.isShowing())
-            dialog.dismiss();
+        if(progressDialog != null && progressDialog.isShowing())
+            progressDialog.dismiss();
         isConnected = true;
 
-        Intent intent = new Intent(context, MainActivity.class);
-        context.startActivity(intent);
+        Intent intent = new Intent(settingsContext, MainActivity.class);
+        settingsContext.enableDisconnectButton();
+        settingsContext.startActivity(intent);
     }
 
-    public void closeConnection() {
-        if(TCPClient != null) {
-            TCPClient.close();
-        }
+    public void closeTcpClient() {
+        isConnected = false;
+        if(tcpClient != null)
+            tcpClient.close();
     }
 
     public void initializeUdpClient() {

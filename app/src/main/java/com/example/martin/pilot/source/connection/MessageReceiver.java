@@ -1,5 +1,7 @@
 package com.example.martin.pilot.source.connection;
 
+import android.util.Log;
+
 import com.example.martin.pilot.source.handlers.PingHandler;
 import com.example.martin.pilot.source.handlers.TaskHandler;
 
@@ -13,7 +15,6 @@ public class MessageReceiver {
         TaskHandler.initialize(client);
 
         pingHandler = new PingHandler();
-        pingHandler.initializeTimer();
     }
 
     public void receiveMessage(String message) {
@@ -23,10 +24,11 @@ public class MessageReceiver {
         switch(header) {
             case "S:ACK":
                 ConnectionManager.getInstance().confirmConnection();
+                pingHandler.initializeTimer();
                 break;
 
             case "S:NACK":
-                ConnectionManager.getInstance().closeConnection();
+                ConnectionManager.getInstance().closeTcpClient();
                 break;
 
             case "S:PONG":
@@ -35,5 +37,10 @@ public class MessageReceiver {
             default:
                 break;
         }
+    }
+
+    public void stopHandlers() {
+        Log.e("Cancelling task", "Stopping handlers");
+        pingHandler.stopHandler();
     }
 }
