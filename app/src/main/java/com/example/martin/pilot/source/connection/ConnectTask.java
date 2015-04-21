@@ -4,18 +4,18 @@ import android.os.AsyncTask;
 import android.util.Log;
 
 
-public class ConnectTask extends AsyncTask<String,String,TCPClient> {
-    private TCPClient client;
+public class ConnectTask extends AsyncTask<String,String,TCPCLient> {
+    private TCPCLient client;
     private MessageReceiver messageReceiver;
 
-    public ConnectTask(TCPClient client) {
+    public ConnectTask(TCPCLient client) {
         this.client = client;
     }
 
     @Override
-    protected TCPClient doInBackground(String... message) {
+    protected TCPCLient doInBackground(String... message) {
         messageReceiver = new MessageReceiver(client);
-        client.setMessageListener(new TCPClient.OnMessageReceived() {
+        client.setMessageListener(new TCPCLient.OnMessageReceived() {
             @Override
             public void messageReceived(String message) {
                 publishProgress(message);

@@ -16,7 +16,7 @@ import java.net.Socket;
 /**
  * Created by Martin on 17/04/2015.
  */
-public class TCPClient {
+public class TCPCLient {
     private boolean isRunning = false;
     private OnMessageReceived messageListener = null;
     private String serverMessage;

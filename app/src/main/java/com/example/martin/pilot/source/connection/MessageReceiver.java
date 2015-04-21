@@ -11,7 +11,7 @@ import com.example.martin.pilot.source.handlers.TaskHandler;
 public class MessageReceiver {
     private PingHandler pingHandler;
 
-    public MessageReceiver(TCPClient client) {
+    public MessageReceiver(TCPCLient client) {
         TaskHandler.initialize(client);
 
         pingHandler = new PingHandler();

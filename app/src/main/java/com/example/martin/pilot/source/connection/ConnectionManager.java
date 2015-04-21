@@ -9,7 +9,7 @@ import com.example.martin.pilot.source.settings.SettingsManager;
 
 
 public class ConnectionManager {
-    private TCPClient tcpClient;
+    private TCPCLient TCPCLient;
     static private ConnectionManager m_self;
     private boolean isConnected = false;
     private SettingsActivity settingsContext;
@@ -41,8 +41,8 @@ public class ConnectionManager {
     public void attemptConnection(SettingsActivity context, ProgressDialog dialog) {
         progressDialog = dialog;
         settingsContext = context;
-        tcpClient = new TCPClient();
-        new ConnectTask(tcpClient).execute("");
+        TCPCLient = new TCPCLient();
+        new ConnectTask(TCPCLient).execute("");
     }
 
     public void confirmConnection() {
@@ -57,8 +57,8 @@ public class ConnectionManager {
 
     public void closeTcpClient() {
         isConnected = false;
-        if(tcpClient != null)
-            tcpClient.close();
+        if(TCPCLient != null)
+            TCPCLient.close();
     }
 
     public void initializeUdpClient() {
