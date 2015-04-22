@@ -28,8 +28,9 @@ public class SettingsManager {
     }
 
     public static SettingsManager getInstance() {
-        if(m_self == null)
+        if(m_self == null) {
             Log.e("SettingsManager", "Uninitialized reference to SettingsManager");
+        }
         return m_self;
     }
 
@@ -53,7 +54,7 @@ public class SettingsManager {
         return getPreferences().getString(DEVICE_NAME, android.os.Build.MODEL);
     }
 
-    public boolean getIsUdpAllowed() {
+    public boolean getIsUdpEnabled() {
         return getPreferences().getBoolean(ALLOW_UDP, false);
     }
 

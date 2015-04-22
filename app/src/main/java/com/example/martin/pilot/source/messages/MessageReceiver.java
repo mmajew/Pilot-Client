@@ -1,19 +1,21 @@
-package com.example.martin.pilot.source.connection;
+package com.example.martin.pilot.source.messages;
 
 import android.util.Log;
 
+import com.example.martin.pilot.source.connection.Client;
+import com.example.martin.pilot.source.connection.ConnectionManager;
 import com.example.martin.pilot.source.handlers.PingHandler;
 import com.example.martin.pilot.source.handlers.TaskHandler;
 
-/**
- * Created by marmajew on 4/17/2015.
- */
+
 public class MessageReceiver {
     private PingHandler pingHandler;
+    private Client client;
 
-    public MessageReceiver(TCPCLient client) {
+    public MessageReceiver(Client client) {
         TaskHandler.initialize(client);
 
+        this.client = client;
         pingHandler = new PingHandler();
     }
 
@@ -22,16 +24,16 @@ public class MessageReceiver {
         String header = splitMessage[0];
 
         switch(header) {
-            case "S:ACK":
+            case ServerMessages.CONNECTION_ACK:
                 ConnectionManager.getInstance().confirmConnection();
                 pingHandler.initializeTimer();
                 break;
 
-            case "S:NACK":
-                ConnectionManager.getInstance().closeTcpClient();
+            case ServerMessages.CONNECTION_NACK:
+                client.close();
                 break;
 
-            case "S:PONG":
+            case ServerMessages.SERVER_PONG:
                 pingHandler.handle();
 
             default:

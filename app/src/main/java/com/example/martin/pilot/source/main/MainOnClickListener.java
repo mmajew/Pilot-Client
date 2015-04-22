@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.AdapterView;
 
 import com.example.martin.pilot.source.connection.ConnectionManager;
+import com.example.martin.pilot.source.cursor.CursorActivity;
 import com.example.martin.pilot.source.settings.SettingsActivity;
 import com.example.martin.pilot.source.tools.DialogFactory;
 
@@ -29,8 +30,10 @@ public class MainOnClickListener implements AdapterView.OnItemClickListener {
             case 1:
                 if(!isConnected)
                     DialogFactory.getNoConnectionDialog(context).show();
-                //intent = new Intent(context, PlacesActivity.class);
-                //context.startActivity(intent);
+                else {
+                    intent = new Intent(context, CursorActivity.class);
+                    context.startActivity(intent);
+                }
                 break;
             case 2:
                 if(!isConnected)

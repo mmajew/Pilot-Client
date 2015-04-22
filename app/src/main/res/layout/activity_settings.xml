@@ -5,7 +5,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context="com.example.martin.pilot.source.settings.SettingsActivity"
-    android:background="@android:color/black"
+    android:background="@android:color/background_dark"
     android:gravity="center">
 
     <LinearLayout

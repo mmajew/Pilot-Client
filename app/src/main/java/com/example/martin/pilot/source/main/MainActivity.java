@@ -6,6 +6,7 @@ import android.util.Log;
 import android.widget.GridView;
 
 import com.example.martin.pilot.R;
+import com.example.martin.pilot.source.connection.ConnectionManager;
 import com.example.martin.pilot.source.settings.SettingsManager;
 
 
@@ -20,20 +21,13 @@ public class MainActivity extends BaseActivity {
         gridview.setAdapter(new MainAdapter(this));
         gridview.setOnItemClickListener(new MainOnClickListener(this));
 
-        initializeManagers();
-
         if(!SettingsManager.getInstance().isConfigurationPresent()) {
-            launchFirstConfiguration();
+            launchConfiguration();
         }
     }
 
-    public void launchFirstConfiguration() {
-        Log.w("Settings", "No configuration available");
+    public void launchConfiguration() {
         Intent settingsIntent = new Intent(this, com.example.martin.pilot.source.settings.SettingsActivity.class);
         startActivity(settingsIntent);
-    }
-
-    private void initializeManagers() {
-        SettingsManager.initialize(this);
     }
 }

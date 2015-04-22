@@ -1,14 +1,12 @@
 package com.example.martin.pilot.source.handlers;
 
-import com.example.martin.pilot.source.connection.TCPCLient;
+import com.example.martin.pilot.source.connection.Client;
 
-/**
- * Created by marmajew on 4/20/2015.
- */
+
 public class TaskHandler {
-    public static TCPCLient client;
+    protected static Client client;
 
-    public static void initialize(TCPCLient TCPCLient) {
-        client = TCPCLient;
+    public static void initialize(Client tcpClient) {
+        client = tcpClient;
     }
 }

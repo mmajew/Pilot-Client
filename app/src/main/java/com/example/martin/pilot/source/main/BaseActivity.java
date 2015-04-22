@@ -7,6 +7,7 @@ import android.view.MenuItem;
 
 import com.example.martin.pilot.R;
 import com.example.martin.pilot.source.connection.ConnectionManager;
+import com.example.martin.pilot.source.settings.SettingsManager;
 
 
 public class BaseActivity extends ActionBarActivity {
@@ -14,11 +15,17 @@ public class BaseActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        initializeManagers();
         updateSubtitle();
     }
 
     public void updateSubtitle() {
         getSupportActionBar().setSubtitle(ConnectionManager.getInstance().getConnectionStateString());
+    }
+
+
+    private void initializeManagers() {
+        SettingsManager.initialize(this);
     }
 
     @Override

@@ -9,7 +9,7 @@ import com.example.martin.pilot.source.settings.SettingsManager;
 
 
 public class ConnectionManager {
-    private TCPCLient TCPCLient;
+    private Client client;
     static private ConnectionManager m_self;
     private boolean isConnected = false;
     private SettingsActivity settingsContext;
@@ -21,7 +21,7 @@ public class ConnectionManager {
     }
 
     public void confirmConnectionLost() {
-        closeTcpClient();
+        closeClient();
 
         Intent intent = new Intent(settingsContext, SettingsActivity.class);
         intent.putExtra("CONNECTION_LOST", true);
@@ -41,8 +41,8 @@ public class ConnectionManager {
     public void attemptConnection(SettingsActivity context, ProgressDialog dialog) {
         progressDialog = dialog;
         settingsContext = context;
-        TCPCLient = new TCPCLient();
-        new ConnectTask(TCPCLient).execute("");
+        client = new Client();
+        new ConnectTask(client).execute("");
     }
 
     public void confirmConnection() {
@@ -55,10 +55,17 @@ public class ConnectionManager {
         settingsContext.startActivity(intent);
     }
 
-    public void closeTcpClient() {
+    public void closeClient() {
         isConnected = false;
-        if(TCPCLient != null)
-            TCPCLient.close();
+        if(client != null)
+            client.close();
+    }
+
+    public void notifyConnectionFailed() {
+        if(progressDialog != null && progressDialog.isShowing())
+            progressDialog.dismiss();
+        if(settingsContext != null)
+            settingsContext.enableConnectButton();
     }
 
     public void initializeUdpClient() {

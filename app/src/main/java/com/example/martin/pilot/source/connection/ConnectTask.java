@@ -3,19 +3,21 @@ package com.example.martin.pilot.source.connection;
 import android.os.AsyncTask;
 import android.util.Log;
 
+import com.example.martin.pilot.source.messages.MessageReceiver;
 
-public class ConnectTask extends AsyncTask<String,String,TCPCLient> {
-    private TCPCLient client;
+
+public class ConnectTask extends AsyncTask<String,String,Client> {
+    private Client client;
     private MessageReceiver messageReceiver;
 
-    public ConnectTask(TCPCLient client) {
+    public ConnectTask(Client client) {
         this.client = client;
     }
 
     @Override
-    protected TCPCLient doInBackground(String... message) {
+    protected Client doInBackground(String... message) {
         messageReceiver = new MessageReceiver(client);
-        client.setMessageListener(new TCPCLient.OnMessageReceived() {
+        client.setMessageListener(new Client.OnMessageReceived() {
             @Override
             public void messageReceived(String message) {
                 publishProgress(message);

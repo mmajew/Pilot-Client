@@ -4,6 +4,7 @@ import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -38,7 +39,8 @@ public class SettingsActivity extends BaseActivity {
                     connectButton.setEnabled(false);
                 }
                 else {
-                    ConnectionManager.getInstance().closeTcpClient();
+                    ConnectionManager.getInstance().closeClient();
+                    updateSubtitle();
                     connectButton.setText("Połącz");
                 }
             }
@@ -67,10 +69,11 @@ public class SettingsActivity extends BaseActivity {
 
         CheckBox udpCheckBox = (CheckBox) findViewById(R.id.checkBoxUdp);
         boolean isUdpAllowed = udpCheckBox.isChecked();
+        settingsManager.saveIsUdpAllowed(isUdpAllowed);
         if(isUdpAllowed) {
+            Log.e("TCP Client", "C: UDP Was checked");
             EditText serverUdpPort = (EditText) findViewById(R.id.editUdpPort);
             settingsManager.saveUdpPort(Integer.parseInt(serverUdpPort.getText().toString()));
-            settingsManager.saveIsUdpAllowed(isUdpAllowed);
         }
     }
 
@@ -79,7 +82,7 @@ public class SettingsActivity extends BaseActivity {
         {
             public void onClick(DialogInterface dialog, int which)
             {
-                ConnectionManager.getInstance().closeTcpClient();
+                ConnectionManager.getInstance().closeClient();
                 enableConnectButton();
                 updateSubtitle();
             }
@@ -97,7 +100,7 @@ public class SettingsActivity extends BaseActivity {
         Integer tcpPort = settingsManager.getTcpPort();
         Integer udpPort = settingsManager.getUdpPort();
 
-        boolean isUdpAllowed = settingsManager.getIsUdpAllowed();
+        boolean isUdpAllowed = settingsManager.getIsUdpEnabled();
 
         ((EditText) findViewById(R.id.editDeviceName)).setText(deviceName);
         ((EditText) findViewById(R.id.editServerAddress)).setText(serverAddress);
