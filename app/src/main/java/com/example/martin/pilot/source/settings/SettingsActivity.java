@@ -84,7 +84,6 @@ public class SettingsActivity extends BaseActivity {
             {
                 ConnectionManager.getInstance().closeClient();
                 enableConnectButton();
-                updateSubtitle();
             }
         });
 
@@ -110,12 +109,14 @@ public class SettingsActivity extends BaseActivity {
     }
 
     public void enableDisconnectButton() {
+        updateSubtitle();
         final Button connectButton = (Button) findViewById(R.id.connectButton);
         connectButton.setText("Rozłącz");
         connectButton.setEnabled(true);
     }
 
     public void enableConnectButton() {
+        updateSubtitle();
         final Button connectButton = (Button) findViewById(R.id.connectButton);
         connectButton.setText("Połącz");
         connectButton.setEnabled(true);

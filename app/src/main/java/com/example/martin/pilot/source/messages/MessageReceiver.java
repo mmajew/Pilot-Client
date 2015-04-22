@@ -10,12 +10,10 @@ import com.example.martin.pilot.source.handlers.TaskHandler;
 
 public class MessageReceiver {
     private PingHandler pingHandler;
-    private Client client;
 
     public MessageReceiver(Client client) {
         TaskHandler.initialize(client);
 
-        this.client = client;
         pingHandler = new PingHandler();
     }
 
@@ -30,7 +28,7 @@ public class MessageReceiver {
                 break;
 
             case ServerMessages.CONNECTION_NACK:
-                client.close();
+                ConnectionManager.getInstance().confirmConnectionLost();
                 break;
 
             case ServerMessages.SERVER_PONG:
