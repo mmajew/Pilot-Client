@@ -52,7 +52,7 @@ public class SettingsActivity extends BaseActivity {
         if (extras != null) {
             if (extras.containsKey("CONNECTION_LOST")) {
                 if(extras.getBoolean("CONNECTION_LOST", false))
-                    DialogFactory.getConnectionlostDialog(this).show();
+                    DialogFactory.getConnectionlostDialog(this, extras.getString("CAUSE")).show();
             }
         }
     }

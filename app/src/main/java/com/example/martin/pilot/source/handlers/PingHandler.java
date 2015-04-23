@@ -27,7 +27,7 @@ public class PingHandler extends TaskHandler {
         timer.scheduleAtFixedRate(new TimerTask() {
             @Override
             public void run() {
-                client.sendTcpMessage(ClientMessages.PING);
+                tcpClient.sendTcpMessage(ClientMessages.PING);
                 try {
                     Thread.sleep(timeoutDelay);
                     if (!isPonged) {
@@ -35,7 +35,7 @@ public class PingHandler extends TaskHandler {
                             @Override
                             public void run() {
                                 Log.e("TCP Client", "C: Ping timed out: ");
-                                ConnectionManager.getInstance().confirmConnectionLost();
+                                ConnectionManager.getInstance().notifyConnectionLost("Brak odpowiedzi serwera.");
                             }
                         });
                         this.cancel();

@@ -1,12 +1,15 @@
 package com.example.martin.pilot.source.handlers;
 
-import com.example.martin.pilot.source.connection.Client;
+import com.example.martin.pilot.source.connection.TcpClient;
+import com.example.martin.pilot.source.connection.UdpClient;
 
 
 public class TaskHandler {
-    protected static Client client;
+    protected static TcpClient tcpClient;
+    protected static UdpClient udpClient;
 
-    public static void initialize(Client tcpClient) {
-        client = tcpClient;
+    public static void initialize(TcpClient tcpClient, UdpClient udpClient) {
+        TaskHandler.tcpClient = tcpClient;
+        TaskHandler.udpClient = udpClient;
     }
 }

@@ -2,21 +2,29 @@ package com.example.martin.pilot.source.messages;
 
 import android.util.Log;
 
-import com.example.martin.pilot.source.connection.Client;
+import com.example.martin.pilot.source.connection.TcpClient;
 import com.example.martin.pilot.source.connection.ConnectionManager;
+import com.example.martin.pilot.source.connection.UdpClient;
 import com.example.martin.pilot.source.handlers.PingHandler;
 import com.example.martin.pilot.source.handlers.TaskHandler;
+import com.example.martin.pilot.source.handlers.UdpConnectionHandler;
+import com.example.martin.pilot.source.settings.SettingsManager;
 
 
 public class MessageReceiver {
     private PingHandler pingHandler;
-    private Client client;
+    private UdpConnectionHandler udpConnectionHandler;
+    private TcpClient tcpClient;
+    private UdpClient udpClient;
 
-    public MessageReceiver(Client client) {
-        TaskHandler.initialize(client);
+    public MessageReceiver(TcpClient tcpClient) {
+        this.tcpClient = tcpClient;
+        this.udpClient = new UdpClient();
 
-        this.client = client;
+        TaskHandler.initialize(tcpClient, udpClient);
+
         pingHandler = new PingHandler();
+        udpConnectionHandler = new UdpConnectionHandler();
     }
 
     public void receiveMessage(String message) {
@@ -25,12 +33,28 @@ public class MessageReceiver {
 
         switch(header) {
             case ServerMessages.CONNECTION_ACK:
-                ConnectionManager.getInstance().confirmConnection();
-                pingHandler.initializeTimer();
+                if(SettingsManager.getInstance().getIsUdpEnabled()) {
+                    udpConnectionHandler.handleRequesting();
+                }
+                else {
+                    confirmConnection();
+                }
+                break;
+
+            case ServerMessages.UDP_ACK:
+                udpConnectionHandler.handleAck();
+                confirmConnection();
+                break;
+
+            case ServerMessages.UDP_NACK:
+                Log.e("UDP Client", "Received NACK from the server.");
+                SettingsManager.getInstance().saveIsUdpAllowed(false);
+                confirmConnection();
                 break;
 
             case ServerMessages.CONNECTION_NACK:
-                client.close();
+                tcpClient.close();
+                ConnectionManager.getInstance().notifyConnectionLost("Serwer zakończył połączenie.");
                 break;
 
             case ServerMessages.SERVER_PONG:
@@ -39,6 +63,11 @@ public class MessageReceiver {
             default:
                 break;
         }
+    }
+
+    public void confirmConnection() {
+        pingHandler.initializeTimer();
+        ConnectionManager.getInstance().confirmConnection();
     }
 
     public void stopHandlers() {

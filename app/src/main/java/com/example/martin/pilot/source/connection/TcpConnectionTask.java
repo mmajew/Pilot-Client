@@ -6,18 +6,18 @@ import android.util.Log;
 import com.example.martin.pilot.source.messages.MessageReceiver;
 
 
-public class ConnectTask extends AsyncTask<String,String,Client> {
-    private Client client;
+public class TcpConnectionTask extends AsyncTask<String,String,TcpClient> {
+    private TcpClient tcpClient;
     private MessageReceiver messageReceiver;
 
-    public ConnectTask(Client client) {
-        this.client = client;
+    public TcpConnectionTask(TcpClient tcpClient) {
+        this.tcpClient = tcpClient;
+        messageReceiver = new MessageReceiver(tcpClient);
     }
 
     @Override
-    protected Client doInBackground(String... message) {
-        messageReceiver = new MessageReceiver(client);
-        client.setMessageListener(new Client.OnMessageReceived() {
+    protected TcpClient doInBackground(String... message) {
+        tcpClient.setMessageListener(new TcpClient.OnMessageReceived() {
             @Override
             public void messageReceived(String message) {
                 publishProgress(message);
@@ -28,7 +28,7 @@ public class ConnectTask extends AsyncTask<String,String,Client> {
                 messageReceiver.stopHandlers();
             }
         });
-        client.run();
+        tcpClient.run();
         return null;
     }
 

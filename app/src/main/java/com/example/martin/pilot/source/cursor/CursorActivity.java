@@ -21,6 +21,15 @@ public class CursorActivity extends BaseActivity {
 
         boolean isUdpEnabled = SettingsManager.getInstance().getIsUdpEnabled();
         cursorHandler = new CursorHandler(isUdpEnabled);
+
+        final View cursorPane = findViewById(R.id.cursorView);
+        cursorPane.addOnLayoutChangeListener(new View.OnLayoutChangeListener() {
+            @Override
+            public void onLayoutChange(View v, int left, int top, int right, int bottom, int oldLeft, int oldTop, int oldRight, int oldBottom) {
+                cursorHandler.sendViewSize(v.getWidth(), v.getHeight());
+            }
+        });
+
         assignListeners();
     }
 

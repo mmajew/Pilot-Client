@@ -16,10 +16,10 @@ public class DialogFactory {
         return dialog;
     }
 
-    public static AlertDialog getConnectionlostDialog(Context context) {
+    public static AlertDialog getConnectionlostDialog(Context context, String message) {
         AlertDialog dialog = new AlertDialog.Builder(context, AlertDialog.THEME_DEVICE_DEFAULT_DARK).create();
         dialog.setTitle("Utracono połączenie");
-        dialog.setMessage("Brak odpowiedzi z serwera");
+        dialog.setMessage(message);
         dialog.setIcon(android.R.drawable.ic_dialog_alert);
 
         return dialog;

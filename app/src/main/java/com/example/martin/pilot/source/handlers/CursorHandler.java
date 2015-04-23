@@ -1,6 +1,5 @@
 package com.example.martin.pilot.source.handlers;
 
-import android.util.Log;
 import android.view.MotionEvent;
 
 import com.example.martin.pilot.source.cursor.AbsoluteMouseAssistant;
@@ -21,22 +20,23 @@ public class CursorHandler extends TaskHandler {
         updateCursorMode(isUdpModeOn);
     }
 
-    public void updateCursorMode(boolean isUdpModeOn) {
-        if (isUdpModeOn)
-            Log.e("TCP Client", "in CURSOR WAS CHECKED YO");
+    public void sendViewSize(int paneHeight, int paneWidth) {
+        String message = ClientMessages.TOUCH_AREA_SIZE + ";" + String.valueOf(paneHeight) + ";" + String.valueOf(paneWidth);
+        tcpClient.sendTcpMessage(message);
+    }
 
-        mouseAssistant = isUdpModeOn ? new RelativeMouseAssistant() : new AbsoluteMouseAssistant();
+    public void updateCursorMode(boolean isUdpModeOn) {
+        mouseAssistant = isUdpModeOn ? new RelativeMouseAssistant(udpClient) : new AbsoluteMouseAssistant(tcpClient);
     }
 
     public void handleMouseClick(MouseButton button) {
         String message = button == MouseButton.leftMouseButton ?
                 ClientMessages.LEFT_CLICK :  ClientMessages.RIGHT_CLICK;
 
-        client.sendTcpMessage(message);
+        tcpClient.sendTcpMessage(message);
     }
 
     public void handleCursorMovement(MotionEvent event) {
-        String message = mouseAssistant.processMotionEvent(event);
-        client.sendTcpMessage(message);
+        mouseAssistant.processMotionEvent(event);
     }
 }
