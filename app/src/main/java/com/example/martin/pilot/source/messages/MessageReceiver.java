@@ -13,9 +13,12 @@ import com.example.martin.pilot.source.settings.SettingsManager;
 
 public class MessageReceiver {
     private PingHandler pingHandler;
+<<<<<<< HEAD
     private UdpConnectionHandler udpConnectionHandler;
     private TcpClient tcpClient;
     private UdpClient udpClient;
+=======
+>>>>>>> 3790b59ef65df05c5b46371c82b668b1614daa07
 
     public MessageReceiver(TcpClient tcpClient) {
         this.tcpClient = tcpClient;
@@ -53,8 +56,12 @@ public class MessageReceiver {
                 break;
 
             case ServerMessages.CONNECTION_NACK:
+<<<<<<< HEAD
                 tcpClient.close();
                 ConnectionManager.getInstance().notifyConnectionLost("Serwer zakończył połączenie.");
+=======
+                ConnectionManager.getInstance().confirmConnectionLost();
+>>>>>>> 3790b59ef65df05c5b46371c82b668b1614daa07
                 break;
 
             case ServerMessages.SERVER_PONG:
