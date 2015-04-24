@@ -26,6 +26,11 @@
             android:name=".source.cursor.CursorActivity"
             android:label="@string/title_activity_cursor" >
         </activity>
+        <activity
+            android:name=".KeyboardActivity"
+            android:screenOrientation="landscape"
+            android:label="@string/title_activity_keyboard" >
+        </activity>
     </application>
 
 </manifest>

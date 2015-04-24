@@ -12,5 +12,6 @@
     <string name="default_tcp_port">4444</string>
     <string name="default_udp_port">4443</string>
     <string name="title_activity_cursor">CursorActivity</string>
+    <string name="title_activity_keyboard">KeyboardActivity</string>
 
 </resources>
