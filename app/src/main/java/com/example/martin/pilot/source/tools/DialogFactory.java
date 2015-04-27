@@ -8,21 +8,15 @@ import android.content.DialogInterface;
 
 public class DialogFactory {
     public static AlertDialog getNoConnectionDialog(Context context) {
-        AlertDialog dialog = new AlertDialog.Builder(context, AlertDialog.THEME_DEVICE_DEFAULT_DARK).create();
-        dialog.setTitle("Brak połączenia");
-        dialog.setMessage("Najpierw nawiąż połączenie z serwerem");
-        dialog.setIcon(android.R.drawable.ic_dialog_alert);
-
-        return dialog;
+        return createAlertDialog(context, "Brak połączenia", "Najpierw nawiąż połączenie z serwerem");
     }
 
     public static AlertDialog getConnectionlostDialog(Context context, String message) {
-        AlertDialog dialog = new AlertDialog.Builder(context, AlertDialog.THEME_DEVICE_DEFAULT_DARK).create();
-        dialog.setTitle("Utracono połączenie");
-        dialog.setMessage(message);
-        dialog.setIcon(android.R.drawable.ic_dialog_alert);
+        return createAlertDialog(context, "Utracono połączenie", message);
+    }
 
-        return dialog;
+    public static AlertDialog getUdpFailedDialog(Context context) {
+        return createAlertDialog(context, "Nie udało się nawiązać połączenia UDP", "Aplikacja będzie kontyunować w trybie TCP only");
     }
 
     public static ProgressDialog getAwaitingConnectionDialog(Context context, DialogInterface.OnClickListener listener) {
@@ -30,6 +24,21 @@ public class DialogFactory {
         dialog.setTitle("Łączenie");
         dialog.setMessage("Oczekiwanie na odpowiedź serwera");
         dialog.setButton(DialogInterface.BUTTON_NEGATIVE, "Anuluj", listener);
+
+        return dialog;
+    }
+
+    private static AlertDialog createAlertDialog(Context context, String title, String message) {
+        AlertDialog dialog = new AlertDialog.Builder(context, AlertDialog.THEME_DEVICE_DEFAULT_DARK).create();
+        dialog.setTitle(title);
+        dialog.setMessage(message);
+        dialog.setIcon(android.R.drawable.ic_dialog_alert);
+        dialog.setCancelable(true);
+        dialog.setButton(android.R.string.ok, "OK", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+                dialog.cancel();
+            }
+        });
 
         return dialog;
     }

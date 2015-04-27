@@ -42,8 +42,15 @@ public class ConnectionManager {
         isConnected = true;
 
         settingsContext.enableDisconnectButton();
-        Intent intent = new Intent(settingsContext, MainActivity.class);
-        settingsContext.startActivity(intent);
+        launchMainActivity(false);
+    }
+
+    public void confirmConnectionWithUdpFailed() {
+        closeProgressDialog();
+        isConnected = true;
+
+        settingsContext.enableDisconnectButton();
+        launchMainActivity(true);
     }
 
     public void notifyConnectionLost(String cause) {
@@ -70,5 +77,13 @@ public class ConnectionManager {
     private void closeProgressDialog() {
         if(progressDialog != null && progressDialog.isShowing())
             progressDialog.dismiss();
+    }
+
+    private void launchMainActivity(boolean hasUdpFailed) {
+        Intent intent = new Intent(settingsContext, MainActivity.class);
+        if(hasUdpFailed) {
+            intent.putExtra("UDP_FAILED", true);
+        }
+        settingsContext.startActivity(intent);
     }
 }
