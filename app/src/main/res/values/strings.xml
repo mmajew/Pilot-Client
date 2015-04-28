@@ -7,11 +7,11 @@
     <string name="item_name_server">Serwer</string>
     <string name="item_name_cursor">Kursor</string>
     <string name="item_name_keyboard">Klawiatura</string>
-    <string name="title_activity_settings">SettingsActivity</string>
     <string name="udp_checkbox">Włącz połączenie UDP dla kursora</string>
     <string name="default_tcp_port">4444</string>
     <string name="default_udp_port">4443</string>
-    <string name="title_activity_cursor">CursorActivity</string>
-    <string name="title_activity_keyboard">KeyboardActivity</string>
+    <string name="title_activity_settings">Ustawienia</string>
+    <string name="title_activity_cursor">Kursor</string>
+    <string name="title_activity_keyboard">Klawiatura</string>
 
 </resources>

@@ -34,7 +34,7 @@ public class DialogFactory {
         dialog.setMessage(message);
         dialog.setIcon(android.R.drawable.ic_dialog_alert);
         dialog.setCancelable(true);
-        dialog.setButton(android.R.string.ok, "OK", new DialogInterface.OnClickListener() {
+        dialog.setButton(DialogInterface.BUTTON_NEUTRAL, "OK", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id) {
                 dialog.cancel();
             }

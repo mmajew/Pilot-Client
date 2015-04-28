@@ -51,8 +51,10 @@ public class SettingsActivity extends BaseActivity {
         Bundle extras = intent.getExtras();
         if (extras != null) {
             if (extras.containsKey("CONNECTION_LOST")) {
-                if(extras.getBoolean("CONNECTION_LOST", false))
+                if(extras.getBoolean("CONNECTION_LOST", false)) {
                     DialogFactory.getConnectionlostDialog(this, extras.getString("CAUSE")).show();
+                    enableConnectButton();
+                }
             }
         }
     }

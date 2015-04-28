@@ -35,6 +35,7 @@ public class PingHandler extends TaskHandler {
                             @Override
                             public void run() {
                                 Log.e("TCP Client", "C: Ping timed out: ");
+                                tcpClient.close();
                                 ConnectionManager.getInstance().notifyConnectionLost("Brak odpowiedzi serwera.");
                             }
                         });

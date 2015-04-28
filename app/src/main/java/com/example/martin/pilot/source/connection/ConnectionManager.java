@@ -54,8 +54,6 @@ public class ConnectionManager {
     }
 
     public void notifyConnectionLost(String cause) {
-        closeClient();
-
         Intent intent = new Intent(settingsContext, SettingsActivity.class);
         intent.putExtra("CONNECTION_LOST", true);
         intent.putExtra("CAUSE", cause);

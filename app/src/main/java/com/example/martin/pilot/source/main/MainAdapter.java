@@ -18,7 +18,7 @@ public class MainAdapter extends BaseAdapter {
         m_Context = context;
     }
 
-    public static class ViewHolder {
+    public class ViewHolder {
         public ImageView itemImage;
         public TextView itemName;
     }

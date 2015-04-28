@@ -16,15 +16,18 @@
         android:layout_alignParentEnd="true"
         android:background="@drawable/cursor_pane"
         android:layout_above="@+id/linearLayout"
-        android:layout_marginBottom="2dp"
+        android:layout_marginBottom="3dp"
         android:adjustViewBounds="false"
         android:cropToPadding="false"
-        android:visibility="visible" />
+        android:visibility="visible"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp" />
 
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="fill_parent"
-        android:layout_height="60dp"
+        android:layout_height="wrap_content"
         android:gravity="center"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
@@ -37,7 +40,9 @@
             android:id="@+id/lmButton"
             android:layout_weight="0.5"
             android:background="@android:color/darker_gray"
-            android:clickable="true" />
+            android:clickable="true"
+            android:layout_marginRight="1dp"
+            android:layout_marginLeft="10dp" />
 
         <Button
             android:layout_width="wrap_content"
@@ -45,7 +50,9 @@
             android:id="@+id/rmButton"
             android:layout_weight="0.5"
             android:background="@android:color/darker_gray"
-            android:clickable="true" />
+            android:clickable="true"
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="10dp" />
     </LinearLayout>
 
 </RelativeLayout>

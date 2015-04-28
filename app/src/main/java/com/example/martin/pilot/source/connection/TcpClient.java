@@ -18,8 +18,8 @@ import java.net.Socket;
 
 
 public class TcpClient {
-    private boolean isRunning = false;
-    private OnMessageReceived messageListener = null;
+    private boolean isRunning;
+    private OnMessageReceived messageListener;
     Socket socket;
 
     PrintWriter out;
@@ -27,6 +27,7 @@ public class TcpClient {
 
     public void setMessageListener(OnMessageReceived listener) {
         messageListener = listener;
+        isRunning = false;
     }
 
     public void sendTcpMessage(String message){
@@ -56,8 +57,9 @@ public class TcpClient {
     }
 
     public void run() {
-        isRunning = true;
         try {
+            isRunning = true;
+
             Log.e("TCP Client", "C: Connecting...");
             final int connectionTimeout = 10 * 1000;
 
