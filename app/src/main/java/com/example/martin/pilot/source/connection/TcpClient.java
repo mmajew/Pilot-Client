@@ -38,10 +38,13 @@ public class TcpClient {
         }
     }
 
-    public void close(){
+    private void cleanup() {
+
+    }
+
+    public void stop(){
         Log.e("TCP", "S: Closing");
         isRunning = false;
-
         sendTcpMessage(ClientMessages.CLOSE);
 
         if(socket != null){
@@ -51,9 +54,6 @@ public class TcpClient {
                 e.printStackTrace();
             }
         }
-
-        if(messageListener != null)
-            messageListener.stop();
     }
 
     public void run() {
@@ -83,7 +83,8 @@ public class TcpClient {
                     }
                 }
             } finally {
-                close();
+                if(messageListener != null)
+                    messageListener.stop();
                 Log.e("TCP", "S: Closed");
             }
         } catch (Exception e) {

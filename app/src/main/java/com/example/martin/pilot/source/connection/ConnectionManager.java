@@ -69,7 +69,7 @@ public class ConnectionManager {
     public void closeClient() {
         isConnected = false;
         if(tcpClient != null)
-            tcpClient.close();
+            tcpClient.stop();
     }
 
     private void closeProgressDialog() {

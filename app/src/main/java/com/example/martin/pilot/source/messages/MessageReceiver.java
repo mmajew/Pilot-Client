@@ -54,7 +54,7 @@ public class MessageReceiver {
                 break;
 
             case ServerMessages.CONNECTION_NACK:
-                tcpClient.close();
+                ConnectionManager.getInstance().closeClient();
                 ConnectionManager.getInstance().notifyConnectionLost("Serwer zakończył połączenie.");
                 break;
 

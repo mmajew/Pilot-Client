@@ -5,7 +5,7 @@ import android.content.Intent;
 import android.view.View;
 import android.widget.AdapterView;
 
-import com.example.martin.pilot.KeyboardActivity;
+import com.example.martin.pilot.source.keyboard.KeyboardActivity;
 import com.example.martin.pilot.source.connection.ConnectionManager;
 import com.example.martin.pilot.source.cursor.CursorActivity;
 import com.example.martin.pilot.source.settings.SettingsActivity;

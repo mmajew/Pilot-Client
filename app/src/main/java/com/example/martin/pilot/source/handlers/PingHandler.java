@@ -20,8 +20,9 @@ public class PingHandler extends TaskHandler {
     }
 
     public void initializeTimer() {
-        final int interval =  8 * 1000;
-        final int timeoutDelay = 4 * 1000;
+        final int interval =  10 * 1000;
+        final int timeoutDelay = 3 * 1000;
+        final int initializationDelay = 2 * 1000;
 
         timer = new Timer();
         timer.scheduleAtFixedRate(new TimerTask() {
@@ -35,7 +36,7 @@ public class PingHandler extends TaskHandler {
                             @Override
                             public void run() {
                                 Log.e("TCP Client", "C: Ping timed out: ");
-                                tcpClient.close();
+                                ConnectionManager.getInstance().closeClient();
                                 ConnectionManager.getInstance().notifyConnectionLost("Brak odpowiedzi serwera.");
                             }
                         });
@@ -46,7 +47,7 @@ public class PingHandler extends TaskHandler {
                     e.printStackTrace();
                 }
             }
-        }, interval, interval);
+        }, initializationDelay, interval);
     }
 
     public void stopHandler() {

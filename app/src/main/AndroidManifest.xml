@@ -26,7 +26,7 @@
             android:label="@string/title_activity_cursor" >
         </activity>
         <activity
-            android:name=".KeyboardActivity"
+            android:name=".source.keyboard.KeyboardActivity"
             android:screenOrientation="landscape"
             android:label="@string/title_activity_keyboard" >
         </activity>
