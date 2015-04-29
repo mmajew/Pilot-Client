@@ -110,12 +110,11 @@
             android:layout_height="wrap_content"
             android:text="@string/udp_checkbox"
             android:id="@+id/checkBoxUdp"
+            android:theme="@android:style/Theme.Holo"
             android:layout_centerVertical="true"
             android:layout_centerHorizontal="true"
             android:textColor="@android:color/white"
-            android:checked="true"
-            android:buttonTint="@android:color/white"
-            android:backgroundTint="@android:color/white" />
+            android:checked="true" />
 
         <LinearLayout
             android:orientation="horizontal"

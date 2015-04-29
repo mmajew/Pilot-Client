@@ -31,7 +31,8 @@
                 android:layout_weight="0.07"
                 android:background="@color/button_material_dark"
                 android:layout_margin="2dp"
-                android:textColor="@android:color/white" />
+                android:textColor="@android:color/white"
+                android:textSize="13dp" />
 
             <Button
                 android:layout_width="30dp"
@@ -41,7 +42,8 @@
                 android:layout_weight="0.07"
                 android:background="@color/button_material_dark"
                 android:layout_margin="2dp"
-                android:textColor="@android:color/white" />
+                android:textColor="@android:color/white"
+                android:textSize="13dp" />
 
             <Button
                 android:layout_width="30dp"
@@ -51,7 +53,8 @@
                 android:layout_weight="0.07"
                 android:background="@color/button_material_dark"
                 android:layout_margin="2dp"
-                android:textColor="@android:color/white" />
+                android:textColor="@android:color/white"
+                android:textSize="13dp" />
 
             <Button
                 android:layout_width="30dp"
@@ -61,37 +64,41 @@
                 android:layout_weight="0.07"
                 android:background="@color/button_material_dark"
                 android:layout_margin="2dp"
-                android:textColor="@android:color/white" />
+                android:textColor="@android:color/white"
+                android:textSize="13dp" />
 
             <Button
                 android:layout_width="30dp"
                 android:layout_height="match_parent"
-                android:text="\$\n4"
+                android:text="$\n4"
                 android:id="@+id/num4Button"
                 android:layout_weight="0.07"
                 android:background="@color/button_material_dark"
                 android:layout_margin="2dp"
-                android:textColor="@android:color/white" />
+                android:textColor="@android:color/white"
+                android:textSize="13dp" />
 
             <Button
                 android:layout_width="30dp"
                 android:layout_height="match_parent"
-                android:text="\%\n5"
+                android:text="%\n5"
                 android:id="@+id/num5Button"
                 android:layout_weight="0.07"
                 android:background="@color/button_material_dark"
                 android:layout_margin="2dp"
-                android:textColor="@android:color/white" />
+                android:textColor="@android:color/white"
+                android:textSize="13dp" />
 
             <Button
                 android:layout_width="30dp"
                 android:layout_height="match_parent"
-                android:text="\^\n6"
+                android:text="^\n6"
                 android:id="@+id/num6Button"
                 android:layout_weight="0.07"
                 android:background="@color/button_material_dark"
                 android:layout_margin="2dp"
-                android:textColor="@android:color/white" />
+                android:textColor="@android:color/white"
+                android:textSize="13dp" />
 
             <Button
                 android:layout_width="30dp"
@@ -101,7 +108,8 @@
                 android:layout_weight="0.07"
                 android:background="@color/button_material_dark"
                 android:layout_margin="2dp"
-                android:textColor="@android:color/white" />
+                android:textColor="@android:color/white"
+                android:textSize="13dp" />
 
             <Button
                 android:layout_width="30dp"
@@ -111,7 +119,8 @@
                 android:layout_weight="0.07"
                 android:background="@color/button_material_dark"
                 android:layout_margin="2dp"
-                android:textColor="@android:color/white" />
+                android:textColor="@android:color/white"
+                android:textSize="13dp" />
 
             <Button
                 android:layout_width="30dp"
@@ -121,7 +130,8 @@
                 android:layout_weight="0.07"
                 android:background="@color/button_material_dark"
                 android:layout_margin="2dp"
-                android:textColor="@android:color/white" />
+                android:textColor="@android:color/white"
+                android:textSize="13dp" />
 
             <Button
                 android:layout_width="30dp"
@@ -131,7 +141,8 @@
                 android:layout_weight="0.07"
                 android:background="@color/button_material_dark"
                 android:layout_margin="2dp"
-                android:textColor="@android:color/white" />
+                android:textColor="@android:color/white"
+                android:textSize="13dp" />
 
             <Button
                 android:layout_width="30dp"
@@ -141,7 +152,8 @@
                 android:layout_weight="0.07"
                 android:background="@color/button_material_dark"
                 android:layout_margin="2dp"
-                android:textColor="@android:color/white" />
+                android:textColor="@android:color/white"
+                android:textSize="13dp" />
 
             <Button
                 android:layout_width="30dp"
@@ -151,7 +163,8 @@
                 android:layout_weight="0.07"
                 android:background="@color/button_material_dark"
                 android:layout_margin="2dp"
-                android:textColor="@android:color/white" />
+                android:textColor="@android:color/white"
+                android:textSize="13dp" />
 
             <ImageButton
                 android:layout_width="60dp"
@@ -303,7 +316,8 @@
                 android:layout_weight="0.07"
                 android:layout_margin="2dp"
                 android:background="@color/button_material_dark"
-                android:textColor="@android:color/white" />
+                android:textColor="@android:color/white"
+                android:textSize="12dp" />
 
             <Button
                 android:layout_width="40dp"
@@ -314,18 +328,20 @@
                 android:layout_weight="0.07"
                 android:layout_margin="2dp"
                 android:background="@color/button_material_dark"
-                android:textColor="@android:color/white" />
+                android:textColor="@android:color/white"
+                android:textSize="12dp" />
 
             <Button
                 android:layout_width="40dp"
                 android:layout_height="match_parent"
-                android:text="|\n\"
+                android:text="|\n\\"
                 android:textAllCaps="false"
                 android:id="@+id/backslashButton"
                 android:layout_weight="0.07"
                 android:layout_margin="2dp"
                 android:background="@color/button_material_dark"
-                android:textColor="@android:color/white" />
+                android:textColor="@android:color/white"
+                android:textSize="12dp" />
 
         </LinearLayout>
 
@@ -456,7 +472,8 @@
                 android:layout_margin="2dp"
                 android:layout_weight="0.07"
                 android:background="@color/button_material_dark"
-                android:textColor="@android:color/white" />
+                android:textColor="@android:color/white"
+                android:textSize="13dp" />
 
             <Button
                 android:layout_width="40dp"
@@ -467,7 +484,8 @@
                 android:layout_margin="2dp"
                 android:layout_weight="0.07"
                 android:background="@color/button_material_dark"
-                android:textColor="@android:color/white" />
+                android:textColor="@android:color/white"
+                android:textSize="13dp" />
 
             <ImageButton
                 android:layout_width="60dp"
@@ -588,7 +606,8 @@
                 android:layout_weight="0.07"
                 android:background="@color/button_material_dark"
                 android:layout_margin="2dp"
-                android:textColor="@android:color/white" />
+                android:textColor="@android:color/white"
+                android:textSize="12dp" />
 
             <Button
                 android:layout_width="40dp"
@@ -599,7 +618,8 @@
                 android:layout_weight="0.07"
                 android:background="@color/button_material_dark"
                 android:layout_margin="2dp"
-                android:textColor="@android:color/white" />
+                android:textColor="@android:color/white"
+                android:textSize="12dp" />
 
             <Button
                 android:layout_width="40dp"
@@ -610,7 +630,8 @@
                 android:layout_weight="0.07"
                 android:background="@color/button_material_dark"
                 android:layout_margin="2dp"
-                android:textColor="@android:color/white" />
+                android:textColor="@android:color/white"
+                android:textSize="12dp" />
 
             <ImageButton
                 android:layout_width="40dp"
