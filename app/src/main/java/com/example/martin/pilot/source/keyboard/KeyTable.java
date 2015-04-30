@@ -3,7 +3,7 @@ package com.example.martin.pilot.source.keyboard;
 
 public class KeyTable {
     final public static String
-        TIDLE = "~",
+        TILDE = "~",
         ONE = "1",
         TWO = "2",
         THREE = "3",

@@ -27,6 +27,8 @@ public class RelativeMouseAssistant extends MouseAssistant {
                 int y = startingY - (int)event.getY();
                 new UdpConnectionTask(udpClient).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, ClientMessages.UDP_MOUSE_MOTION + ";" + String.valueOf(x) + ";" + String.valueOf(y) + ";");
                 break;
+            default :
+                new UdpConnectionTask(udpClient).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, ClientMessages.UDP_CURSOR_DOWN);
         }
     }
 

@@ -27,7 +27,7 @@ public class KeyboardInitializer {
         View button;
 
         button = activity.findViewById(R.id.tildeButton);
-        button.setTag(KeyTable.TIDLE);
+        button.setTag(KeyTable.TILDE);
         button.setOnTouchListener(listener);
 
         button = activity.findViewById(R.id.num1Button);
